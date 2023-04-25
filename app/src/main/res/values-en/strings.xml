@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CPA web</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="construcao">Under construction</string>
+    <string name="inicio">Home</string>
+    <string name="entrar">Login</string>
+    <string name="naoTemConta">Don\'t have an account? Sign up</string>
+    <string name="email">Email</string>
+    <string name="senha">Password</string>
+    <string name="cadastro">Cadastre</string>
+    <string name="tipoPerfil">What type of your profile?</string>
+    <string name="comum">Common</string>
+    <string name="profissional">Professional</string>
+    <string name="temConta">Already have an account? Log</string>
+    <string name="recepcao">Welcome to</string>
+    <string name="compartilhe">Share moments</string>
+    <string name="login">Login</string>
+    <string name="criarConta">Create account</string>
+    <string name="nomeCompleto">Full name</string>
+    <string name="dataNascimento">Date of birth</string>
+    <string name="celular">Mobile Number</string>
+    <string name="cpf">Document</string>
+    <string name="confirmaSenha">Confirm password</string>
+    <string name="cancelar">Cancel</string>
+    <string name="finalizar">End</string>
+    <string name="cadastroSucesso">Registration done successfully!!</string>
+
+</resources>

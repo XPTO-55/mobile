@@ -31,7 +31,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="C P A"
+                android:text="@string/cpa"
                 android:textSize="30dp"
                 android:textColor="#EBFFFFFF"/>
         </LinearLayout>
@@ -46,7 +46,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CPAGroup©"
+            android:text="@string/cpaGroup"
             android:textColor="#8FFFFFFF"
             android:textSize="16dp"/>
 

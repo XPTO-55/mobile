@@ -34,7 +34,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CPA"
+                    android:text="@string/cpa"
                     android:textColor="#fff"
                     android:textSize="22dp"
                     android:layout_marginRight="5dp"
@@ -47,7 +47,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Home"
+                    android:text="@string/inicio"
                     android:textColor="#B5FFFFFF"
                     android:textSize="17dp"
                     android:layout_marginRight="170dp"/>
@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Em construção"
+                android:text="@string/construcao"
                 android:textSize="30dp"
                 />
 

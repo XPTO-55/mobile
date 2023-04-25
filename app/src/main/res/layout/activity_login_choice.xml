@@ -37,7 +37,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Cadastro"
+                android:text="@string/cadastro"
                 android:textColor="#DDFFFFFF"
                 android:textSize="30dp"
                 android:layout_marginTop="3.5sp"
@@ -54,7 +54,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Qual tipo do seu perfil?"
+                android:text="@string/tipoPerfil"
                 android:textSize="18dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="20dp"
@@ -62,7 +62,7 @@
             <Button
                 android:layout_width="200dp"
                 android:layout_height="45dp"
-                android:text="Comum"
+                android:text="@string/comum"
                 style="@style/OrangeButton"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_rectangle"
@@ -70,7 +70,7 @@
             <Button
                 android:layout_width="200dp"
                 android:layout_height="45dp"
-                android:text="Profissional"
+                android:text="@string/profissional"
                 style="@style/BlueButton"
                 android:background="@drawable/rounded_rectangle"
                 android:onClick="cadastroProfissional"/>
@@ -79,14 +79,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:text="Já possui conta? Faça login"
+                android:text="@string/temConta"
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/montserrat_light"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CPAGroup©"
+                android:text="@string/cpaGroup"
                 android:layout_marginTop="200dp"/>
         </LinearLayout>
     </LinearLayout>

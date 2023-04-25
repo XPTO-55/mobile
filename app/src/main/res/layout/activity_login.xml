@@ -33,7 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5sp"
-                android:text="C"
+                android:text="@string/c"
                 android:textColor="@color/primary"
                 android:textSize="35sp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2sp"
-                android:text="P"
+                android:text="@string/p"
                 android:textColor="@color/primary"
                 android:textSize="35sp"
                 android:textStyle="bold" />
@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A"
+                android:text="@string/a"
                 android:textColor="@color/primary"
                 android:textSize="35sp"
                 android:textStyle="bold" />
@@ -81,7 +81,7 @@
                 android:background="#F9F9F9"
                 android:paddingLeft="10dp"
                 android:textSize="15dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:fontFamily="@font/montserrat_light"
                 android:id="@+id/edt_email"
                 />
@@ -112,7 +112,7 @@
                 android:background="#F9F9F9"
                 android:paddingLeft="10dp"
                 android:textSize="15dp"
-                android:hint="Senha"
+                android:hint="@string/senha"
                 android:fontFamily="@font/montserrat_light"
                 android:id="@+id/edt_password"
                 />
@@ -125,13 +125,13 @@
             android:layout_marginTop="15sp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/rounded_rectangle"
-            android:text="Entrar"
+            android:text="@string/entrar"
             android:onClick="telaHome"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Não possui conta? Cadastre-se"
+            android:text="@string/naoTemConta"
             android:fontFamily="@font/montserrat"/>
 
     </LinearLayout>
