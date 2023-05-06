@@ -17,14 +17,19 @@
         android:id="@+id/professionals"
         android:icon="@drawable/ic_baseline_people_24"
         />
-    <item
-        android:title="@string/menu_blog"
-        android:id="@+id/blog"
-        android:icon="@drawable/ic_baseline_blog_24"
-        />
+<!--    <item-->
+<!--        android:title="@string/menu_blog"-->
+<!--        android:id="@+id/blog"-->
+<!--        android:icon="@drawable/ic_baseline_blog_24"-->
+<!--        />-->
     <item
         android:title="@string/menu_profile"
         android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_profile_24"
+        />
+    <item
+        android:title="@string/menu_appointment"
+        android:id="@+id/appointment"
         android:icon="@drawable/ic_baseline_profile_24"
         />
 </menu>
