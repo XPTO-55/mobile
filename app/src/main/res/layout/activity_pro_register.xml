@@ -38,7 +38,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/cadastro"
+                android:text="@string/txt_register"
                 android:textColor="#DDFFFFFF"
                 android:textSize="30dp"
                 android:layout_marginTop="3.5dp"
@@ -84,7 +84,7 @@
                         android:background="#F9F9F9"
                         android:paddingLeft="10dp"
                         android:textSize="15dp"
-                        android:hint="@string/nomeCompleto"
+                        android:hint="@string/lbl_full_name"
                         android:fontFamily="@font/montserrat_light"
                         android:id="@+id/edt_name"
                         />
@@ -115,7 +115,7 @@
                         android:background="#F9F9F9"
                         android:paddingLeft="10dp"
                         android:textSize="15dp"
-                        android:hint="@string/email"
+                        android:hint="@string/lbl_email"
                         android:fontFamily="@font/montserrat_light"
                         android:id="@+id/edt_email"
                         />
@@ -146,7 +146,7 @@
                         android:background="#F9F9F9"
                         android:paddingLeft="10dp"
                         android:textSize="15dp"
-                        android:hint="@string/dataNascimento"
+                        android:hint="@string/lbl_birthday"
                         android:fontFamily="@font/montserrat_light"
                         android:inputType="date"
                         android:id="@+id/edt_birthday"
@@ -178,7 +178,7 @@
                         android:background="#F9F9F9"
                         android:paddingLeft="10dp"
                         android:textSize="15dp"
-                        android:hint="@string/celular"
+                        android:hint="@string/lbl_phone"
                         android:fontFamily="@font/montserrat_light"
                         android:inputType="phone"
                         android:id="@+id/edt_phone"
@@ -210,7 +210,7 @@
                         android:background="#F9F9F9"
                         android:paddingLeft="10dp"
                         android:textSize="15dp"
-                        android:hint="@string/cpf"
+                        android:hint="@string/lbl_cpf"
                         android:fontFamily="@font/montserrat_light"
                         android:inputType="numberSigned"
                         android:id="@+id/edt_cpf"
@@ -241,7 +241,7 @@
                         android:background="#F9F9F9"
                         android:paddingLeft="10dp"
                         android:textSize="15dp"
-                        android:hint="@string/senha"
+                        android:hint="@string/lbl_password"
                         android:fontFamily="@font/montserrat_light"
                         android:id="@+id/edt_password"
                         />
@@ -272,7 +272,7 @@
                         android:background="#F9F9F9"
                         android:paddingLeft="10dp"
                         android:textSize="15dp"
-                        android:hint="@string/confirmaSenha"
+                        android:hint="@string/lbl_confirm_password"
                         android:fontFamily="@font/montserrat_light"
                         android:id="@+id/edt_confirm_password"
                         />
@@ -292,7 +292,7 @@
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@drawable/rounded_rectangle"
-                android:text="@string/cancelar"
+                android:text="@string/txt_cancel"
                 android:onClick="telaInicial"/>
 
             <Button
@@ -300,7 +300,7 @@
                 android:layout_width="170dp"
                 android:layout_height="45dp"
                 android:background="@drawable/rounded_rectangle"
-                android:text="@string/finalizar"
+                android:text="@string/txt_finish"
                 android:layout_marginLeft="10dp"
                 android:onClick="registerSucess"
                 />

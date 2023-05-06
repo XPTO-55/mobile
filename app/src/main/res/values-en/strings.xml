@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CPA web</string>
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="construcao">Under construction</string>
-    <string name="inicio">Home</string>
-    <string name="entrar">Login</string>
-    <string name="naoTemConta">Don\'t have an account? Sign up</string>
-    <string name="email">Email</string>
-    <string name="senha">Password</string>
-    <string name="cadastro">Cadastre</string>
-    <string name="tipoPerfil">What type of your profile?</string>
-    <string name="comum">Common</string>
-    <string name="profissional">Professional</string>
-    <string name="temConta">Already have an account? Log</string>
-    <string name="recepcao">Welcome to</string>
-    <string name="compartilhe">Share moments</string>
-    <string name="login">Login</string>
-    <string name="criarConta">Create account</string>
-    <string name="nomeCompleto">Full name</string>
-    <string name="dataNascimento">Date of birth</string>
-    <string name="celular">Mobile Number</string>
-    <string name="cpf">Document</string>
-    <string name="confirmaSenha">Confirm password</string>
-    <string name="cancelar">Cancel</string>
-    <string name="finalizar">End</string>
-    <string name="cadastroSucesso">Registration done successfully!!</string>
+    <string name="cpaGroup" translatable="false">CPAGroup©</string>
+    <string name="c" translatable="false">C</string>
+    <string name="p" translatable="false">P</string>
+    <string name="a" translatable="false">A</string>
+    <string name="cpa" translatable="false">CPA</string>
+
+    <string name="txt_building">Under construction</string>
+    <string name="txt_home">Home</string>
+
+    <string name="txt_welcome">Welcome to</string>
+    <string name="txt_share_moments">Share moments</string>
+
+    <string name="txt_register">Register</string>
+    <string name="txt_profile_type">What type of your profile?</string>
+    <string name="txt_profile_type_common">Common</string>
+    <string name="txt_profile_type_professional">Professional</string>
+    <string name="txt_have_account">Already have an account? Sign In</string>
+    <string name="txt_doesnt_have_account">Don\'t have an account? Sign up</string>
+
+
+    <string name="txt_signin">Sign In</string>
+    <string name="txt_create_account">Create account</string>
+    <string name="lbl_full_name">Full name</string>
+    <string name="lbl_birthday">Date of birth</string>
+    <string name="lbl_email">Email</string>
+    <string name="lbl_password">Password</string>
+    <string name="lbl_phone">Phone</string>
+    <string name="lbl_cpf">CPF</string>
+    <string name="lbl_confirm_password">Confirm password</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="txt_finish">Finish</string>
+    <string name="txt_register_sucess">Registration done successfully!!</string>
 
 </resources>

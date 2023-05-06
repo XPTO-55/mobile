@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/menu_home"
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        />
+    <item
+        android:title="@string/menu_places"
+        android:id="@+id/places"
+        android:icon="@drawable/ic_baseline_place_24"
+        android:iconTint="@color/white"
+        />
+    <item
+        android:title="@string/menu_professionals"
+        android:id="@+id/professionals"
+        android:icon="@drawable/ic_baseline_people_24"
+        />
+    <item
+        android:title="@string/menu_blog"
+        android:id="@+id/blog"
+        android:icon="@drawable/ic_baseline_blog_24"
+        />
+    <item
+        android:title="@string/menu_profile"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_baseline_profile_24"
+        />
+</menu>

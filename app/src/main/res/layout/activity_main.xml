@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="50sp"
                 android:layout_marginBottom="7sp"
-                android:text="@string/recepcao"
+                android:text="@string/txt_welcome"
                 android:textSize="20sp"
                 android:layout_marginTop="90sp"
                 android:textColor="#79000000"
@@ -77,8 +77,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100sp"
-            android:text="Compartilhe
-            momentos"
+            android:text="@string/txt_share_moments"
             android:textSize="35sp"
             android:textStyle="normal"
             android:fontFamily="@font/montserrat_light"/>
@@ -89,7 +88,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="30sp"
             android:background="@drawable/rounded_rectangle"
-            android:text="Login"
+            android:text="@string/txt_signin"
             android:onClick="login"/>
 
         <Button
@@ -99,7 +98,7 @@
             android:layout_marginTop="15sp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/rounded_rectangle"
-            android:text="Criar conta"
+            android:text="@string/txt_create_account"
             android:onClick="cadastro"/>
 
     </LinearLayout>

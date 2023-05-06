@@ -21,7 +21,7 @@ class Login : AppCompatActivity() {
     }
 
     fun telaHome(component: View) {
-        val telaHome = Intent(applicationContext, communityHome::class.java)
+        val telaHome = Intent(applicationContext, CommunityHome::class.java)
         val email = findViewById<EditText>(R.id.edt_email).text.toString()
         val password = findViewById<EditText>(R.id.edt_password).text.toString()
 
@@ -32,7 +32,13 @@ class Login : AppCompatActivity() {
         request.enqueue(object: Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if(response.isSuccessful){
+
+                    val preferences = getSharedPreferences("AUTH", MODE_PRIVATE)
+                    val editor = preferences.edit()
+                    editor.putString("token", response.body()?.jwtToken)
+                    editor.apply()
                     startActivity(telaHome)
+
                 }else if(response.code() === 401){
                     Toast.makeText(applicationContext, "Credenciais inválidas", Toast.LENGTH_SHORT).show()
                 }
