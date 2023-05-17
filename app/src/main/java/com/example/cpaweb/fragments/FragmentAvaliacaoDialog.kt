@@ -9,10 +9,10 @@ import android.widget.FrameLayout
 import androidx.fragment.app.DialogFragment
 import com.example.cpaweb.R
 import com.example.cpaweb.databinding.ResFragAvaliacaoDialogBinding
-import com.example.cpaweb.models.AvaliacaoFeedback
+import kotlin.reflect.KFunction3
 
 class FragmentAvaliacaoDialog(
-    private val enviarFeedback: (AvaliacaoFeedback) -> Unit
+    private val enviarFeedback: KFunction3<Long, String, Double, Unit>
 ) : DialogFragment(R.layout.res_frag_avaliacao_dialog) {
 
     private lateinit var binding: ResFragAvaliacaoDialogBinding
@@ -33,7 +33,6 @@ class FragmentAvaliacaoDialog(
             MarginLayoutParams.MATCH_PARENT
         )
         binding.dialogContainer.layoutParams = lp
-
     }
 
 }
