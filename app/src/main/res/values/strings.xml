@@ -42,4 +42,7 @@
     <string name="tv_title_professional">professionals</string>
     <string name="txt_learn_more">Saiba mais</string>
     <string name="txt_hint_professional_name">Nome do profissional</string>
+    <string name="txt_rating_appointment">De 0 a 5 avalie o atendimento</string>
+    <string name="txt_feedback">Deixe seu feedback</string>
+    <string name="txt_appointment_data">Dados da consulta</string>
 </resources>

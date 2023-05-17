@@ -1,20 +1,18 @@
 package com.example.cpaweb.adapters
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cpaweb.models.users.UserBase
-import android.content.Intent
 import android.view.View
 import android.widget.TextView
 import com.example.cpaweb.R
+import com.example.cpaweb.fragments.ProfessionalsFragment
 import com.example.cpaweb.models.users.professionals.Professional
 
-class ProfessionalListAdapter (val context: Context, var professionalList: ArrayList<Professional>):
+class ProfessionalListAdapter(val context: ProfessionalsFragment, var professionalList: ArrayList<Professional>):
     RecyclerView.Adapter<ProfessionalListAdapter.ProfessionalItemViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfessionalItemViewHolder {
-        var view = LayoutInflater.from(context).inflate(R.layout.professional_list_item, parent, false)
+        var view = LayoutInflater.from(parent.context).inflate(R.layout.professional_list_item, parent, false)
         return ProfessionalItemViewHolder(view)
     }
 

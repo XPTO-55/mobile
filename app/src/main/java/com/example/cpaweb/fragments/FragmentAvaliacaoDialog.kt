@@ -33,7 +33,6 @@ class FragmentAvaliacaoDialog(
             MarginLayoutParams.MATCH_PARENT
         )
         binding.dialogContainer.layoutParams = lp
-
     }
 
 }

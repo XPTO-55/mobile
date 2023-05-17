@@ -4,22 +4,179 @@
     android:id="@+id/dialogContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="50dp"
+    android:layout_marginVertical="50dp"
+    android:layout_marginHorizontal="20dp"
     app:layout_constraintCircleRadius="50dp"
     android:background="@drawable/border_dialog"
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tt"
+    <LinearLayout
+        android:id="@+id/professional_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="teste" />
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_professional_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="@string/txt_hint_professional_name"
+                />
+
+            <TextView
+                android:id="@+id/tv_professional_speciality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="4dp"
+                android:textSize="12sp"
+                android:textAlignment="textStart"
+                android:textColor="@color/black_900"
+                android:textFontWeight="@integer/material_motion_duration_short_1"
+                android:text="Especialidade"
+                />
+
+            <LinearLayout
+                android:id="@+id/rating_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_fill"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_fill"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_fill"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_fill"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_fill"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/professional_info"
+        android:id="@+id/tv_appointment_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_appointment_data" />
+
+    <LinearLayout
+        android:id="@+id/container_appointment"
+        android:layout_below="@+id/tv_appointment_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/container_appointment_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Paciente" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Data" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Status" />
+        </LinearLayout>
+       <ListView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_below="@+id/container_appointment"
+        android:id="@+id/tv_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_feedback"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/et_comment"
+        android:layout_below="@id/tv_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="8"
+        android:minLines="3"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        android:background="@color/material_dynamic_neutral100"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_below="@+id/et_comment"
+        android:id="@+id/tv_rating_appointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_rating_appointment"
+        android:layout_marginTop="20dp"
+        />
+
+    <RatingBar
+        android:layout_below="@id/tv_rating_appointment"
+        android:id="@+id/rb_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stepSize="1"
+        android:numStars="5"
+        />
 
     <Button
-        android:layout_below="@+id/tt"
+        style="@style/OrangeButton"
+        android:layout_below="@+id/rb_rating"
+        android:layout_marginHorizontal="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enviar" />
+        android:text="Enviar"
+        android:layout_marginTop="10dp"
+        />
 
 </RelativeLayout>

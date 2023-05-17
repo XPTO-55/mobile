@@ -4,14 +4,14 @@ import java.time.LocalDate
 import java.io.Serializable
 
 open class UserBase (
-  val id: Long = 0L,
-  val name: String = "",
-  val email: String = "",
-  val password: String = "",
-  val profileUrl: String? = null,
-  val cpf: String? = null,
-  val about: String? = null,
-  val birthday: LocalDate? = null,
-  val landline: String? = null,
-  val phone: String? = null,
+  open val id: Long = 0L,
+  open val name: String = "",
+  open val email: String = "",
+  open val password: String = "",
+  open val profileUrl: String? = null,
+  open val cpf: String? = null,
+  open val about: String? = null,
+  open val birthday: LocalDate? = null,
+  open val landline: String? = null,
+  open val phone: String? = null,
 ) : Serializable
