@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.example.cpaweb.helpers.AuthManager
 import com.example.cpaweb.models.auth.LoginRequest
 import com.example.cpaweb.models.auth.LoginResponse
 import com.example.cpaweb.services.Api
@@ -32,20 +33,25 @@ class Login : AppCompatActivity() {
         request.enqueue(object: Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if(response.isSuccessful){
-
-                    val preferences = getSharedPreferences("AUTH", MODE_PRIVATE)
-                    val editor = preferences.edit()
-                    editor.putString("token", response.body()?.jwtToken)
-                    editor.apply()
-                    startActivity(telaHome)
-
+                    val token: String? = response.body()?.jwtToken
+                    if(token != null){
+                        AuthManager.saveAuthToken(token)
+                        startActivity(telaHome)
+                    }
+                    Toast
+                        .makeText(applicationContext, "Erro ao obter informações do usuário", Toast.LENGTH_SHORT)
+                        .show()
                 }else if(response.code() === 401){
-                    Toast.makeText(applicationContext, "Credenciais inválidas", Toast.LENGTH_SHORT).show()
+                    Toast
+                        .makeText(applicationContext, "Credenciais inválidas", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
 
             override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
-                Toast.makeText(applicationContext, "Ops! houve um erro na conexão", Toast.LENGTH_SHORT).show()
+                Toast
+                    .makeText(applicationContext, "Ops! houve um erro na conexão", Toast.LENGTH_SHORT)
+                    .show()
             }
         })
     }
