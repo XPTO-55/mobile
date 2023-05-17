@@ -15,8 +15,7 @@
         android:padding="30sp"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="-48dp"
-        android:background="@mipmap/fundo"
->
+        android:background="@mipmap/fundo">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="75sp"

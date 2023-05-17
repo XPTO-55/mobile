@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CardQueryHistoric">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/rounded_rectangle"
+        android:orientation="vertical"
+        android:backgroundTint="#EFEFEF"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="10dp"
+        android:outlineProvider="bounds"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Data: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Profissional: "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Especialidade: "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Status: "/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+
+            style="@style/OrangeButton"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_rectangle"
+            android:layout_marginTop="10dp"
+            android:text="Avaliar profissional"
+            />
+
+    </LinearLayout>
+
+</GridLayout>

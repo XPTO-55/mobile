@@ -3,12 +3,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.HomeFragment">
+    tools:context=".fragments.HomeFragment"
+    android:background="@mipmap/fundo4">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="HOME" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingRight="20dp"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conheça"
+                android:textSize="40dp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="#fff"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@mipmap/bg_home_blog"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Blog CPA"
+                    android:textColor="#fff"
+                    android:textSize="28dp"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_marginTop="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Descubra o universo autista no nosso blog! Informações, dicas e histórias inspiradoras te esperam."/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@mipmap/bg_home_lugares"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lugares"
+                    android:textColor="#fff"
+                    android:textSize="28dp"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_marginTop="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Encontre diversos lugares com acessibilidadeautista com base no endereço informado"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@mipmap/bg_home_site"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Site WEB"
+                    android:textColor="#fff"
+                    android:textSize="28dp"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_marginTop="15dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Conheça nosso todo nosso sistema na versão web"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@mipmap/bg_home_faq"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FAQ"
+                    android:textColor="#fff"
+                    android:textSize="28dp"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_marginTop="15dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Se possui alguma dúvida referente ao sistema ou ao mundo autista, acesse nossa FAQ"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
 
 </FrameLayout>

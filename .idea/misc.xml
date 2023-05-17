@@ -26,14 +26,32 @@
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/CPAweb/app/src/main/res/layout/fragment_primary_button.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/CPAweb/app/src/main/res/layout/fragment_primary_input.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/CPAweb/app/src/main/res/layout/loginorchoice.xml" value="0.176" />
-        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_community_home.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/drawable/bg_home_blog.xml" value="0.1975" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/drawable/circle.xml" value="0.1785" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/drawable/edittext_shadow.xml" value="0.176" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/drawable/ic_baseline_blog_24.xml" value="0.1785" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1785" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/drawable/rounded_left_border.xml" value="0.1785" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/drawable/rounded_rectangle.xml" value="0.1975" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/drawable/rounded_rectangle_top.xml" value="0.1975" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_avaliacao.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_card_query_historic.xml" value="0.2359375" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_community_home.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_login_choice.xml" value="0.25" />
-        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_pro_register.xml" value="0.2" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_register_common.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_register_sucess.xml" value="0.2501302761855133" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_about_professionals.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_blog.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_places.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_professionals.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_query_history.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/res_frag_avaliacao_dialog.xml" value="0.25" />
       </map>
     </option>
   </component>
@@ -46,7 +64,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.16799999999999998" />
+        <option name="scale" value="0.1" />
       </ProjectState>
     </option>
   </component>
