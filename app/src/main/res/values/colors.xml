@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="primary">#2A8DD2</color>
+    <color name="primary_900">#0A4266</color>
+    <color name="primary_700">#155A8A</color>
+    <color name="primary_500">#2394BD</color>
+    <color name="primary_300">#52B0D9</color>
+    <color name="primary_100">#9ED5F0</color>
+
     <color name="secondary">#FFB24D</color>
-    <color name="white">#F6F6F6</color>
+    <color name="secondary_900">#A1600B</color>
+    <color name="secondary_700">#C97F17</color>
+    <color name="secondary_500">#E89B23</color>
+    <color name="secondary_300">#F4B85E</color>
+    <color name="secondary_100">#FFDFA9</color>
+
+    <color name="white_900">#F2F2F2</color>
+    <color name="white">#F5F5F5</color>
+    <color name="white_500">#F6F6F6</color>
+    <color name="white_300">#FAFAFA</color>
+    <color name="white_100">#FCFCFC</color>
+
+
     <color name="black_900">#121212</color>
-    <color name="black">#1e1e1e</color>
-    <color name="black_500">#212121</color>
-    <color name="black_300">#3c3c3c</color>
-    <color name="black_100">#4d4d4d</color>
+    <color name="black">#212121</color>
+    <color name="black_500">#333333</color>
+    <color name="black_300">#4d4d4d</color>
+    <color name="black_100">#666</color>
 </resources>
