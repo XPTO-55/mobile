@@ -89,7 +89,7 @@
                android:textColor="@color/black_900"
                android:textFontWeight="@integer/material_motion_duration_short_1"
                tools:ignore="RtlCompat"
-               android:text="Especialidade"
+               android:text="@string/txt_speciality"
                />
            <Button
                style="@style/OrangeButton"

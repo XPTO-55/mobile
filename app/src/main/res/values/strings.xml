@@ -47,4 +47,6 @@
     <string name="txt_appointment_data">Dados da consulta</string>
     <string name="tv_title_places">Lugares acessíveis</string>
     <string name="txt_hint_place_name">Nome de lugar</string>
+    <string name="txt_speciality">Especialidade</string>
+    <string name="settings">Configurações</string>
 </resources>

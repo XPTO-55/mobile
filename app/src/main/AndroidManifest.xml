@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.cpaweb">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
@@ -20,6 +24,9 @@
         android:theme="@style/Theme.CPAWeb"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".AboutUser"
+            android:exported="false" />
         <activity
             android:name=".CardQueryHistoric"
             android:exported="false" />
@@ -66,7 +73,7 @@
         <!-- android:exported="false" /> -->
         <activity
             android:name=".splash"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".LoginChoice"
             android:exported="false" />

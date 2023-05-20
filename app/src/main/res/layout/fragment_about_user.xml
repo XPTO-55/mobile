@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="-90dp"
+            android:background="@drawable/circle"
+            android:gravity="center">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="195dp"
+                android:layout_height="195dp"
+                android:src="@mipmap/foto_perfil" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_light"
+            android:text="Nome do usuario"
+            android:textColor="@color/black"
+            android:textSize="28dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_location_on_24"
+                android:layout_marginRight="2dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_light"
+                android:text="São Paulo - SP"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="300"
+                    android:textColor="@color/primary"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Amigos"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1.5dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#2C000000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="26"
+                    android:textColor="@color/primary"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Publicações"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/rounded_rectangle"
+                android:backgroundTint="@color/primary"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_facebook" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/rounded_rectangle"
+                android:backgroundTint="@color/primary"
+                android:gravity="center"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="25dp">
+
+                <LinearLayout
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_instagram" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/rounded_rectangle"
+                android:backgroundTint="@color/primary"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:background="@drawable/rounded_rectangle"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_twitter" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/settings"
+            style="@style/OrangeButton"
+            android:background="@drawable/rounded_rectangle"
+            android:onClick="cadastroProfissional"/>
+
+        <TextView
+            android:layout_marginTop="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cpaGroup"
+            android:textColor="#8F424242"
+            android:textSize="16dp"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>
