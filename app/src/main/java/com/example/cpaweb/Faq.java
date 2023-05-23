@@ -5,6 +5,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.example.cpaweb.adapters.VersionAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,7 +33,6 @@ public class Faq extends AppCompatActivity {
     }
 
     private void initData() {
-
         versionsList = new ArrayList<>();
         versionsList.add(new Versions("Android 10", "Version 10", "Api level 29", "Descrição"));
     }

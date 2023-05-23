@@ -9,7 +9,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.cpaweb.models.users.patient.CreatePatientRequest
-import com.example.cpaweb.services.Api
+import com.example.cpaweb.rest.Api
 import com.example.cpaweb.services.PatientService
 import retrofit2.Call
 import retrofit2.Callback

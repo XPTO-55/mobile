@@ -26,11 +26,7 @@
         <activity
             android:name=".Faq"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".CardQueryHistoric"
@@ -73,8 +69,14 @@
         <!-- android:name=".LoginOrRegister" -->
         <!-- android:exported="false" /> -->
         <activity
-            android:name=".splash"
-            android:exported="true" />
+            android:name=".Splash"
+            android:exported="true">
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".LoginChoice"
             android:exported="false" />

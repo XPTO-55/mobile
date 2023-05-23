@@ -119,6 +119,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_login"
             style="@style/OrangeButton"
             android:layout_width="200dp"
             android:layout_height="45dp"
@@ -126,9 +127,10 @@
             android:layout_marginBottom="20dp"
             android:background="@drawable/rounded_rectangle"
             android:text="@string/txt_signin"
-            android:onClick="telaHome"/>
+            />
 
         <TextView
+            android:id="@+id/txt_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/txt_doesnt_have_account"

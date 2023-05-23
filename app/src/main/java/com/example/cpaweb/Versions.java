@@ -19,8 +19,6 @@ public class Versions {
         this.apiLevel = apiLevel;
         this.description = description;
         this.expandable = false;
-
-
     }
 
     public String getCodeName() {

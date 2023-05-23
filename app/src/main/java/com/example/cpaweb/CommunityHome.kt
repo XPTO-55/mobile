@@ -30,15 +30,6 @@ class CommunityHome : AppCompatActivity() {
             }
             true
         }
-
-        val prefs = getSharedPreferences("AUTH", MODE_PRIVATE)
-        val token = prefs.getString("token", null)
-
-        if (token == null) {
-            println("SEM TOKEN")
-        } else {
-            println(token)
-        }
     }
 
     private fun changeMenuOption(fragment: Fragment) {

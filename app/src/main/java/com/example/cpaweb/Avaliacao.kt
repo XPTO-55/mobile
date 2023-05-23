@@ -6,7 +6,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.cpaweb.fragments.FragmentAvaliacaoDialog
 import com.example.cpaweb.models.users.CreateRatingRequest
-import com.example.cpaweb.services.Api
+import com.example.cpaweb.rest.Api
 import com.example.cpaweb.services.RatingService
 import retrofit2.Call
 import retrofit2.Callback
