@@ -6,18 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cpaweb.R
 import com.example.cpaweb.adapters.ProfessionalListAdapter
-import com.example.cpaweb.databinding.AppointmentDataViewRowBinding
+import com.example.cpaweb.callbacks.GetProfessionalCallback
 import com.example.cpaweb.databinding.FragmentProfessionalsBinding
-import com.example.cpaweb.databinding.ResFragAvaliacaoDialogBinding
-import com.example.cpaweb.models.appointments.Appointment
 import com.example.cpaweb.models.users.professionals.Professional
+import com.example.cpaweb.rest.Api
+import com.example.cpaweb.services.ProfessionalService
 import java.time.LocalDate
-import java.time.LocalDateTime
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -54,7 +54,20 @@ class ProfessionalsFragment : Fragment(R.layout.fragment_professionals) {
         professionalRecyclerView.setLayoutManager(LinearLayoutManager(this.context));
         populateList()
 
-        adapter.notifyDataSetChanged();
+        val service = Api.createService<ProfessionalService>(ProfessionalService::class.java)
+
+        service.getProfessionals().enqueue(GetProfessionalCallback(
+            { mensagem ->
+                Toast.makeText(
+                    view.context,
+                    mensagem,
+                    Toast.LENGTH_LONG
+                ).show()
+            },
+            adapter.notifyDataSetChanged()
+        ))
+
+
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

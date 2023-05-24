@@ -13,16 +13,6 @@ import com.example.cpaweb.databinding.FragmentPlacesBinding
 import com.example.cpaweb.databinding.FragmentProfileBinding
 import com.example.cpaweb.helpers.AuthManager
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfileFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding
     override fun onCreateView(
@@ -30,7 +20,6 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         binding = FragmentProfileBinding.inflate(inflater)
         return binding.root
     }
