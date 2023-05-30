@@ -60,26 +60,29 @@
                 android:layout_marginBottom="20dp"
                 android:fontFamily="@font/montserrat"/>
             <Button
+                android:id="@+id/btn_register_common"
                 android:layout_width="200dp"
                 android:layout_height="45dp"
                 android:text="@string/txt_profile_type_common"
                 style="@style/OrangeButton"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/rounded_rectangle"
-                android:onClick="cadastroComum"/>
+                />
             <Button
+                android:id="@+id/btn_register_professional"
                 android:layout_width="200dp"
                 android:layout_height="45dp"
                 android:text="@string/txt_profile_type_professional"
                 style="@style/BlueButton"
                 android:background="@drawable/rounded_rectangle"
-                android:onClick="cadastroProfissional"/>
+                />
 
             <TextView
+                android:id="@+id/txt_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
-                android:text="@string/txt_doesnt_have_account"
+                android:text="@string/txt_have_account"
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/montserrat_light"/>
 

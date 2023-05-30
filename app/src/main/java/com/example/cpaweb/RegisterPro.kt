@@ -8,9 +8,9 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import com.example.cpaweb.models.users.patient.CreatePatientRequest
-import com.example.cpaweb.services.Api
-import com.example.cpaweb.services.PatientService
+import com.example.cpaweb.models.users.professionals.CreateProfessionalRequest
+import com.example.cpaweb.rest.Api
+import com.example.cpaweb.services.ProfessionalService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -58,8 +58,8 @@ class RegisterPro : AppCompatActivity() {
             null
         }
 
-        val service = Api.createService(PatientService::class.java)
-        val createPatientRequest = CreatePatientRequest(
+        val service = Api.createService(ProfessionalService::class.java)
+        val createProfessionalRequest = CreateProfessionalRequest(
             name.text.toString(),
             email.text.toString(),
             selectedBirthdayDate,
@@ -67,7 +67,7 @@ class RegisterPro : AppCompatActivity() {
             cpf.text.toString(),
             password.text.toString()
         )
-        val request: Call<Void> = service.createPatient(createPatientRequest)
+        val request: Call<Void> = service.createProfessional(createProfessionalRequest)
         request.enqueue(object: Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 if(response.isSuccessful){

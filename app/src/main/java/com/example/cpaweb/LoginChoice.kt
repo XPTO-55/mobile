@@ -4,24 +4,35 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.cpaweb.databinding.ActivityLoginChoiceBinding
 
 class LoginChoice : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginChoiceBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login_choice)
+        binding = ActivityLoginChoiceBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.txtLogin.setOnClickListener {
+            startActivity(Intent(baseContext, Login::class.java))
+        }
+
+        binding.btnRegisterCommon.setOnClickListener {
+            cadastroComum()
+        }
+
+        binding.btnRegisterProfessional.setOnClickListener {
+            cadastroProfissional()
+        }
     }
 
-    fun cadastroProfissional(componente: View) {
-
+    fun cadastroProfissional() {
         val cadastro = Intent(applicationContext, RegisterPro::class.java)
-
         startActivity(cadastro)
     }
 
-    fun cadastroComum(componente: View) {
-
+    fun cadastroComum() {
         val cadastro = Intent(applicationContext, RegisterCommon::class.java)
-
         startActivity(cadastro)
     }
 

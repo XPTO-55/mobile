@@ -48,6 +48,8 @@ class PlacesFragment : Fragment() {
         placesRecyclerView = binding.rvPlacesList
         placesRecyclerView.adapter = adapter
         placesRecyclerView.setLayoutManager(LinearLayoutManager(this.context));
+
+
         populateList()
 
         adapter.notifyDataSetChanged();
