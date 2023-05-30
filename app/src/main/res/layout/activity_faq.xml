@@ -5,14 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
     tools:context=".Faq">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerView"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="100dp"
+        >
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="42dp"
+            android:background="@drawable/rounded_left_border"
+            android:backgroundTint="@color/primary"
+            android:gravity="center"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_pesc"
+                android:layout_margin="17dp"
+                />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="250dp"
+            android:layout_height="42dp"
+            android:background="#F1F1F1"
+            android:paddingLeft="10dp"
+            android:textSize="15dp"
+            android:hint="Pesquisar..."
+            android:fontFamily="@font/montserrat_light"
+            />
+    </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="600dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerView"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+    </ScrollView>
 
 </LinearLayout>

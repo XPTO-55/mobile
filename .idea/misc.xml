@@ -38,7 +38,7 @@
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_avaliacao.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_card_query_historic.xml" value="0.2359375" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_community_home.xml" value="0.21666666666666667" />
-        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_faq.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_faq.xml" value="0.264" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_faq_cpa.xml" value="0.1" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/activity_login_choice.xml" value="0.25" />
@@ -58,6 +58,8 @@
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_professionals.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_query_history.xml" value="0.25" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_settings.xml" value="0.176" />
+        <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/fragment_support.xml" value="0.176" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/places_list_item.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/professional_list_item.xml" value="0.25" />
         <entry key="..\:/Users/leo.jonas.t.serafim/OneDrive - Accenture/Desktop/mobile/app/src/main/res/layout/res_frag_avaliacao_dialog.xml" value="0.25" />
