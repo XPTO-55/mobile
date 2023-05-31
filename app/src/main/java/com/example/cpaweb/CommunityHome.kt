@@ -20,9 +20,8 @@ class CommunityHome : AppCompatActivity() {
                 R.id.home -> changeMenuOption(HomeFragment())
                 R.id.places -> changeMenuOption(PlacesFragment())
                 R.id.professionals -> changeMenuOption(ProfessionalsFragment())
-//                R.id.blog -> changeMenuOption(BlogFragment())
-                R.id.profile -> changeMenuOption(ProfileFragment())
-                R.id.appointment -> changeMenuOption(ProfileFragment())
+                R.id.settings -> changeMenuOption(SettingsFragment())
+                R.id.appointment -> changeMenuOption(QueryHistoryFragment())
 
                 else -> {
                 }

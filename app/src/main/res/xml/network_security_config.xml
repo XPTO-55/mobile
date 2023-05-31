@@ -2,6 +2,6 @@
 <network-security-config>
     <base-config cleartextTrafficPermitted="true" />
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">http://192.168.15.20:7000/</domain>
+        <domain includeSubdomains="true">http://10.18.7.89:7000/</domain>
     </domain-config>
 </network-security-config>

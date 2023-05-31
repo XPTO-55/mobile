@@ -23,13 +23,14 @@
 <!--        android:icon="@drawable/ic_baseline_blog_24"-->
 <!--        />-->
     <item
-        android:title="@string/menu_profile"
-        android:id="@+id/profile"
-        android:icon="@drawable/ic_baseline_profile_24"
-        />
-    <item
         android:title="@string/menu_appointment"
         android:id="@+id/appointment"
-        android:icon="@drawable/ic_baseline_profile_24"
+        android:icon="@drawable/baseline_calendar_today_24"
         />
+    <item
+        android:title="@string/menu_profile"
+        android:id="@+id/settings"
+        android:icon="@drawable/baseline_settings_24"
+        />
+
 </menu>
