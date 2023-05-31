@@ -47,6 +47,7 @@ class Login : AppCompatActivity() {
 
         request.enqueue(LoginCallback(
             ::saveToken,
+            ::saveUserInfoId,
             { mensagem ->
                 Toast.makeText(
                     baseContext,
@@ -64,5 +65,9 @@ class Login : AppCompatActivity() {
 
     private fun saveToken(token: String){
         AuthManager.saveAuthToken(token)
+    }
+
+    private fun saveUserInfoId(userInfoId: Long){
+        AuthManager.saveUserInfoId(userInfoId)
     }
 }

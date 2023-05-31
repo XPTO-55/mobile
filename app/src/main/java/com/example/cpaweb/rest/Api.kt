@@ -1,16 +1,22 @@
 package com.example.cpaweb.rest
 
 import AuthInterceptor
+import DateHelper
+import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
 object Api {
+    private val gson = GsonBuilder()
+        .registerTypeAdapter(DateHelper::class.java, DateHelper())
+        .create()
+
     private val retrofit: Retrofit =
             Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("http://10.18.7.89:7000/")
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .baseUrl("http://192.168.15.20:7000/")
                 .client(
                     OkHttpClient.Builder()
                         .addInterceptor(AuthInterceptor())

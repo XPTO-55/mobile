@@ -13,18 +13,18 @@ import com.example.cpaweb.models.appointments.Appointment
 import java.time.LocalDateTime
 
 class RatingAppointmentAdapter (val context: Context, var appointmentList: ArrayList<Appointment>):
-    RecyclerView.Adapter<RatingAppointmentAdapter.AppointmentItemViewHolder>() {
+    RecyclerView.Adapter<RatingAppointmentAdapter.RatingAppointmentItemViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RatingAppointmentAdapter.AppointmentItemViewHolder {
+    ): RatingAppointmentAdapter.RatingAppointmentItemViewHolder {
         var view = LayoutInflater.from(context).inflate(R.layout.appointment_data_view_row, parent, false)
-        return RatingAppointmentAdapter.AppointmentItemViewHolder(view)
+        return RatingAppointmentAdapter.RatingAppointmentItemViewHolder(view)
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(
-        holder: RatingAppointmentAdapter.AppointmentItemViewHolder,
+        holder: RatingAppointmentAdapter.RatingAppointmentItemViewHolder,
         position: Int
     ) {
         val currentAppointment = appointmentList[position]
@@ -41,7 +41,7 @@ class RatingAppointmentAdapter (val context: Context, var appointmentList: Array
         return appointmentList.size
     }
 
-    class AppointmentItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+    class RatingAppointmentItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val txtPatient = itemView.findViewById<TextView>(R.id.tv_appointment_patient_name_text)
         val txtDate = itemView.findViewById<TextView>(R.id.tv_appointment_data_text)
         val txtStatus = itemView.findViewById<TextView>(R.id.tv_appointment_status_text)

@@ -19,32 +19,74 @@
         android:outlineProvider="bounds"
         >
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Data: "/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Profissional: "/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Especialidade: "/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:fontFamily="@font/montserrat"
-            android:text="Status: "/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="18dp"
+               android:fontFamily="@font/montserrat"
+               android:text="Data: "/>
+           <TextView
+               android:id="@+id/tv_appointment_data_text_row"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="18dp"
+               android:fontFamily="@font/montserrat"
+               />
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Profissional: "/>
+            <TextView
+                android:id="@+id/tv_appointment_professional_text_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Especialidade: "/>
+            <TextView
+                android:id="@+id/tv_appointment_speciality_text_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Status: "/>
+            <TextView
+                android:id="@+id/tv_appointment_status_text_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:fontFamily="@font/montserrat"
+                />
+        </LinearLayout>
 
         <Button
             android:layout_width="200dp"

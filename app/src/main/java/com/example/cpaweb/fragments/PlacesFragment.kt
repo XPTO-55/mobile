@@ -6,25 +6,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cpaweb.adapters.PlaceListAdapter
+import com.example.cpaweb.callbacks.GetPlaceCallback
+import com.example.cpaweb.callbacks.GetProfessionalCallback
 import com.example.cpaweb.databinding.FragmentPlacesBinding
 import com.example.cpaweb.models.Address
 import com.example.cpaweb.models.places.Place
-
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [PlacesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+import com.example.cpaweb.rest.Api
+import com.example.cpaweb.services.PlaceService
+import com.example.cpaweb.services.ProfessionalService
 class PlacesFragment : Fragment() {
     private lateinit var placesRecyclerView: RecyclerView;
     private lateinit var placesList: ArrayList<Place>;
@@ -50,9 +44,22 @@ class PlacesFragment : Fragment() {
         placesRecyclerView.setLayoutManager(LinearLayoutManager(this.context));
 
 
-        populateList()
+//        populateList()
 
-        adapter.notifyDataSetChanged();
+        val service = Api.createService<PlaceService>(PlaceService::class.java)
+
+        service.getPlaces().enqueue(
+            GetPlaceCallback(
+            { mensagem ->
+                Toast.makeText(
+                    view.context,
+                    mensagem,
+                    Toast.LENGTH_LONG
+                ).show()
+            },
+            adapter
+        )
+        )
     }
 
     @RequiresApi(Build.VERSION_CODES.O)

@@ -32,6 +32,12 @@ class PlaceListAdapter (val context: PlacesFragment, var placesList: ArrayList<P
         return placesList.size
     }
 
+    fun updateData(newItems: List<Place>) {
+        placesList.clear()
+        placesList.addAll(newItems)
+        notifyDataSetChanged()
+    }
+
     class PlaceItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val txtName = itemView.findViewById<TextView>(R.id.tv_place_name)
         val txtStreet = itemView.findViewById<TextView>(R.id.tv_place_street)

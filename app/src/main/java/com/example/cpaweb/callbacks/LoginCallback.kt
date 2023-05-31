@@ -6,17 +6,21 @@ import kotlin.reflect.KFunction1
 
 class LoginCallback(
     private val saveToken: KFunction1<String, Unit>,
+    private val saveUserInfo: KFunction1<Long, Unit>,
     private val handleError: (String) -> Unit,
     private val launchActivity: () -> Unit,
         ): Callback<LoginResponse> {
     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
         if(response.isSuccessful){
             val token: String? = response.body()?.jwtToken
-            if(token != null){
-                saveToken(token)
-                launchActivity()
+            val userInfoId: Long? = response.body()?.id
+            if(token == null || userInfoId == null){
+                handleError("Erro ao obter informações do usuário")
+               return
             }
-            handleError("Erro ao obter informações do usuário")
+            saveToken(token)
+            saveUserInfo(userInfoId)
+            launchActivity()
         }else if(response.code() === 401){
             handleError("Credenciais inválidas")
         }

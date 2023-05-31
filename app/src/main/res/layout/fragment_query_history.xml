@@ -55,6 +55,7 @@
             >
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_container_appointment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:listitem="@layout/activity_card_query_historic"

@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.TextView
 import com.example.cpaweb.R
 import com.example.cpaweb.fragments.ProfessionalsFragment
+import com.example.cpaweb.models.places.Place
 import com.example.cpaweb.models.users.professionals.Professional
 
 class ProfessionalListAdapter(val context: ProfessionalsFragment, var professionalList: ArrayList<Professional>):
@@ -33,6 +34,12 @@ class ProfessionalListAdapter(val context: ProfessionalsFragment, var profession
 
     override fun getItemCount(): Int {
         return professionalList.size
+    }
+
+    fun updateData(newItems: List<Professional>) {
+        professionalList.clear()
+        professionalList.addAll(newItems)
+        notifyDataSetChanged()
     }
 
     class ProfessionalItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){

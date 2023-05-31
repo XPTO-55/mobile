@@ -18,17 +18,6 @@ import com.example.cpaweb.models.users.professionals.Professional
 import com.example.cpaweb.rest.Api
 import com.example.cpaweb.services.ProfessionalService
 import java.time.LocalDate
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ProfessionalsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ProfessionalsFragment : Fragment(R.layout.fragment_professionals) {
     private lateinit var professionalRecyclerView: RecyclerView;
     private lateinit var professionalList: ArrayList<Professional>;
@@ -52,7 +41,7 @@ class ProfessionalsFragment : Fragment(R.layout.fragment_professionals) {
         professionalRecyclerView = binding.rvProfessionalsList
         professionalRecyclerView.adapter = adapter
         professionalRecyclerView.setLayoutManager(LinearLayoutManager(this.context));
-        populateList()
+//        populateList()
 
         val service = Api.createService<ProfessionalService>(ProfessionalService::class.java)
 
@@ -64,7 +53,7 @@ class ProfessionalsFragment : Fragment(R.layout.fragment_professionals) {
                     Toast.LENGTH_LONG
                 ).show()
             },
-            adapter.notifyDataSetChanged()
+            adapter
         ))
 
 
