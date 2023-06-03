@@ -1,5 +1,6 @@
 package com.example.cpaweb
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.cpaweb.databinding.ActivityAboutProfessionalBinding
@@ -13,6 +14,9 @@ class AboutProfessional : AppCompatActivity() {
         binding = ActivityAboutProfessionalBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val professional = intent.getSerializableExtra("professionalData") as Professional
+        if(professional.profileUrl != ""){
+            binding.ciProfileImage.setImageURI(Uri.parse(professional.profileUrl))
+        }
         binding.tvProfessionalNameText.text = professional.name.toString()
         binding.tvProfessionalSpecialityText.text = professional.especialidade.toString()
         binding.rbRating.rating = professional.ratings.map { it.rating }.average().toFloat()

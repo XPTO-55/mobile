@@ -24,6 +24,7 @@
             android:gravity="center">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ci_profile_image"
                 android:layout_width="195dp"
                 android:layout_height="195dp"
                 android:src="@mipmap/foto_perfil" />

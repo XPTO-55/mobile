@@ -82,6 +82,9 @@ class SettingsFragment : Fragment() {
         binding.nameUser.text = user.username.toString()
         binding.emailUser.text = user.email.toString()
         binding.phoneUser.text = user.phone.toString()
+        if(user.profileUrl != ""){
+            binding.ivProfileImage.setImageURI(Uri.parse(user.profileUrl))
+        }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

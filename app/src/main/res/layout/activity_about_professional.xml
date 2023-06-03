@@ -26,6 +26,7 @@
                 >
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ci_profile_image"
                     android:layout_width="145dp"
                     android:layout_height="145dp"
                     android:src="@mipmap/foto_perfil"/>
