@@ -4,17 +4,13 @@ import LoginCallback
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Toast
-import com.example.cpaweb.databinding.ActivityCommunityHomeBinding
 import com.example.cpaweb.databinding.ActivityLoginBinding
-import com.example.cpaweb.databinding.ResFragAvaliacaoDialogBinding
 import com.example.cpaweb.helpers.AuthManager
 import com.example.cpaweb.models.auth.LoginRequest
 import com.example.cpaweb.models.auth.LoginResponse
+import com.example.cpaweb.models.users.UserBase
 import com.example.cpaweb.rest.Api
 import com.example.cpaweb.services.AuthService
 import retrofit2.Call
@@ -47,7 +43,7 @@ class Login : AppCompatActivity() {
 
         request.enqueue(LoginCallback(
             ::saveToken,
-            ::saveUserInfoId,
+            ::saveUserInfo,
             { mensagem ->
                 Toast.makeText(
                     baseContext,
@@ -55,7 +51,8 @@ class Login : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             },
-            ::launchActivity
+            ::launchActivity,
+            ::finishActivity
         ))
     }
 
@@ -63,11 +60,15 @@ class Login : AppCompatActivity() {
         startActivity(Intent(baseContext, CommunityHome::class.java))
     }
 
+    private fun finishActivity() {
+        finishActivity()
+    }
+
     private fun saveToken(token: String){
         AuthManager.saveAuthToken(token)
     }
 
-    private fun saveUserInfoId(userInfoId: Long){
-        AuthManager.saveUserInfoId(userInfoId)
+    private fun saveUserInfo(userData: LoginResponse){
+        AuthManager.saveUser(userData)
     }
 }

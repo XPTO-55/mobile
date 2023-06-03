@@ -50,36 +50,8 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/black_900"
                 android:textFontWeight="@integer/material_motion_duration_short_1"
-                android:text="Especialidade"
+                android:text="@string/txt_speciality"
                 />
-
-            <LinearLayout
-                android:id="@+id/rating_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/star_fill"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/star_fill"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/star_fill"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/star_fill"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/star_fill"/>
-            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>

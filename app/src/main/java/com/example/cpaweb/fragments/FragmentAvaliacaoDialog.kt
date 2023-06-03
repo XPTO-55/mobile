@@ -38,10 +38,9 @@ class FragmentAvaliacaoDialog(
         binding.tvProfessionalName.text = appointment.professional.toString()
         binding.tvProfessionalSpeciality.text = appointment.especiality.toString()
 
-        val comment = binding.etComment.text.toString()
-        val rating = binding.rbRating.rating.toDouble()
-
         binding.btnSendFeedback.setOnClickListener {
+            val comment = binding.etComment.text.toString()
+            val rating = binding.rbRating.rating.toDouble()
             enviarFeedback(appointment.professionalId, comment, rating)
         }
     }

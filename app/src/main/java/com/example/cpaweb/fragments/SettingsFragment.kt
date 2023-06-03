@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import com.example.cpaweb.AboutProfessional
 import com.example.cpaweb.AboutUser
 import com.example.cpaweb.CommunityHome
 import com.example.cpaweb.EditUser
@@ -22,24 +23,31 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SettingsFragment : Fragment() {
     private lateinit var binding: FragmentSettingsBinding
+    private lateinit var homeActivity: CommunityHome
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSettingsBinding.inflate(inflater)
+        AuthManager.init(binding.root.context)
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        val homeActivity = activity as CommunityHome
+    fun bindingOptions(){
         val bottomNav = homeActivity.findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        val toolBar = homeActivity.findViewById<Toolbar>(R.id.tb_toolbar)
-        toolBar.title = String.format("CPA | %s", getString(R.string.menu_settings))
 
         binding.containerProfile.setOnClickListener{
-            startActivity(Intent(context, AboutUser::class.java))
+            val userType = AuthManager.getUserType()
+            when(userType){
+                "professionals" -> {
+                    startActivity(Intent(context, AboutProfessional::class.java))
+                }
+                else -> {
+                    startActivity(Intent(context, AboutUser::class.java))
+                }
+            }
+
         }
 
         binding.settingsEditProfile.setOnClickListener{
@@ -67,5 +75,22 @@ class SettingsFragment : Fragment() {
             AuthManager.clearAuthToken()
             startActivity(Intent(context, Login::class.java))
         }
+    }
+
+    private fun populateUser(){
+        val user = AuthManager.getUser()
+        binding.nameUser.text = user.username.toString()
+        binding.emailUser.text = user.email.toString()
+        binding.phoneUser.text = user.phone.toString()
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        homeActivity = activity as CommunityHome
+        val toolBar = homeActivity.findViewById<Toolbar>(R.id.tb_toolbar)
+        toolBar.title = String.format("CPA | %s", getString(R.string.menu_settings))
+
+        bindingOptions()
+        populateUser()
     }
 }

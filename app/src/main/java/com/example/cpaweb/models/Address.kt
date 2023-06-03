@@ -11,5 +11,5 @@ data class Address(
     val zipcode: String = "",
     val city: String = "",
     val uf: String = "",
-    val url: String?
+    val url: String? = ""
 ): Serializable

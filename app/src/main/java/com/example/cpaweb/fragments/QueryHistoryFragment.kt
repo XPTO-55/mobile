@@ -44,16 +44,16 @@ class QueryHistoryFragment : Fragment() {
         toolBar.title = String.format("CPA | %s", getString(R.string.menu_appointment))
 
         appointmentList = ArrayList()
-        adapter = AppointmentListAdapter(this, appointmentList, { mensagem ->
+        adapter = AppointmentListAdapter(this, appointmentList) { message ->
             Toast.makeText(
                 view.context,
-                mensagem,
+                message,
                 Toast.LENGTH_LONG
             ).show()
-        })
+        }
         appointmentRecyclerView = binding.rvContainerAppointment
         appointmentRecyclerView.adapter = adapter
-        appointmentRecyclerView.setLayoutManager(LinearLayoutManager(this.context));
+        appointmentRecyclerView.layoutManager = LinearLayoutManager(this.context);
 //        populateList()
 
         val service = Api.createService<AppointmentService>(AppointmentService::class.java)
@@ -63,10 +63,10 @@ class QueryHistoryFragment : Fragment() {
         if(userId != null){
             service.getAppointments(userId).enqueue(
                 GetAppointmentsCallback(
-                    { mensagem ->
+                    { message ->
                         Toast.makeText(
                             view.context,
-                            mensagem,
+                            message,
                             Toast.LENGTH_LONG
                         ).show()
                     },

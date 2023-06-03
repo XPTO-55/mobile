@@ -132,7 +132,7 @@
                             />
                     </LinearLayout>
                     <EditText
-                        android:id="@+id/email"
+                        android:id="@+id/edt_email"
                         android:layout_width="match_parent"
                         android:layout_height="42dp"
                         android:background="#F1F1F1"
@@ -338,6 +338,7 @@
             android:layout_marginTop="30dp">
 
             <Button
+                android:id="@+id/btn_cancel"
                 android:layout_width="150dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"
@@ -345,11 +346,11 @@
                 android:text="Cancelar"
                 style="@style/OrangeButton"
                 android:background="@drawable/rounded_rectangle"
-                android:onClick="cadastroProfissional"
                 android:layout_marginRight="20dp"
-                tools:ignore="OnClick" />
+                 />
 
             <Button
+                android:id="@+id/btn_save"
                 android:layout_width="150dp"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"
@@ -357,8 +358,7 @@
                 android:text="Salvar"
                 style="@style/BlueButton"
                 android:background="@drawable/rounded_rectangle"
-                android:onClick="cadastroProfissional"
-                tools:ignore="OnClick" />
+                 />
 
         </LinearLayout>
 

@@ -7,6 +7,7 @@ data class LoginResponse(
     val refreshToken: String = "",
     val username: String = "",
     val email: String = "",
-    val profileUrlString: String = "",
-    val id: Long = 0L
+    val profileUrl: String? = "",
+    val id: Long = 0L,
+    val phone: String = "",
 )

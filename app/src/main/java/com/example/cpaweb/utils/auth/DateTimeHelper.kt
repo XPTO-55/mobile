@@ -5,17 +5,16 @@ import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken
 import com.google.gson.stream.JsonWriter
 import java.io.IOException
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-class DateHelper : TypeAdapter<LocalDate>() {
+class DateTimeHelper : TypeAdapter<LocalDateTime>() {
     @RequiresApi(Build.VERSION_CODES.O)
-    private val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+    private val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
 
     @RequiresApi(Build.VERSION_CODES.O)
     @Throws(IOException::class)
-    override fun write(out: JsonWriter, value: LocalDate?) {
+    override fun write(out: JsonWriter, value: LocalDateTime?) {
         if (value == null) {
             out.nullValue()
         } else {
@@ -25,12 +24,12 @@ class DateHelper : TypeAdapter<LocalDate>() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     @Throws(IOException::class)
-    override fun read(`in`: JsonReader): LocalDate? {
+    override fun read(`in`: JsonReader): LocalDateTime? {
         if (`in`.peek() == JsonToken.NULL) {
             `in`.nextNull()
             return null
         }
         val dateString = `in`.nextString()
-        return LocalDate.parse(dateString, formatter)
+        return LocalDateTime.parse(dateString, formatter)
     }
 }
