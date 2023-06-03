@@ -1,9 +1,12 @@
 package com.example.cpaweb.adapters
 
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cpaweb.R
 import com.example.cpaweb.fragments.PlacesFragment
@@ -26,6 +29,17 @@ class PlaceListAdapter (val context: PlacesFragment, var placesList: ArrayList<P
         holder.txtCity.text = currentPlace.address?.city
         holder.txtState.text = currentPlace.address?.uf
         holder.txtZipcode.text = currentPlace.address?.zipcode
+        holder.btnMore.setOnClickListener{
+            val url = currentPlace.address?.url
+            if(url == null){
+                Toast.makeText(holder.itemView.context, "Link do endereço não cadastrada", Toast.LENGTH_SHORT).show()
+            }else{
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                holder.itemView.context.startActivity(intent)
+            }
+
+        }
     }
 
     override fun getItemCount(): Int {
@@ -46,5 +60,6 @@ class PlaceListAdapter (val context: PlacesFragment, var placesList: ArrayList<P
         val txtCity = itemView.findViewById<TextView>(R.id.tv_place_city)
         val txtState = itemView.findViewById<TextView>(R.id.tv_place_state)
         val txtZipcode = itemView.findViewById<TextView>(R.id.tv_place_zipcode)
+        val btnMore = itemView.findViewById<TextView>(R.id.btn_more)
     }
 }

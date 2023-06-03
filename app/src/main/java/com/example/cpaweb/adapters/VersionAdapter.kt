@@ -1,4 +1,4 @@
-package com.example.cpaweb
+package com.example.cpaweb.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cpaweb.R
+import com.example.cpaweb.Versions
 
 class VersionAdapter(val versionList: List<Versions>) :
     RecyclerView.Adapter<VersionAdapter.VersionVH>(){

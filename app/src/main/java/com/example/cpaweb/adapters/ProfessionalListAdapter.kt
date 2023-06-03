@@ -1,13 +1,16 @@
 package com.example.cpaweb.adapters
 
+import android.content.Intent
 import android.view.LayoutInflater
-import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
 import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.RatingBar
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.cpaweb.AboutProfessional
 import com.example.cpaweb.R
 import com.example.cpaweb.fragments.ProfessionalsFragment
-import com.example.cpaweb.models.places.Place
 import com.example.cpaweb.models.users.professionals.Professional
 
 class ProfessionalListAdapter(val context: ProfessionalsFragment, var professionalList: ArrayList<Professional>):
@@ -21,15 +24,14 @@ class ProfessionalListAdapter(val context: ProfessionalsFragment, var profession
         val currentProfessional = professionalList[position]
         holder.txtName.text = currentProfessional.name
         holder.txtSpeciality.text = currentProfessional.especialidade
+        holder.rating.rating = currentProfessional.ratings.map { it.rating }.average().toFloat()
 
-//        holder.itemView.setOnClickListener {
-//            val intent = Intent(context, ChatActivity::class.java)
-//
-//            intent.putExtra("name", currentUser.name);
-//            intent.putExtra("uid", currentUser.uid);
-//
-//            context.startActivity(intent)
-//        }
+        holder.btnMore.setOnClickListener {
+            val intent = Intent(holder.itemView.getContext(), AboutProfessional::class.java)
+            intent.putExtra("professionalData", currentProfessional)
+            holder.itemView.context.startActivity(intent)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -45,6 +47,8 @@ class ProfessionalListAdapter(val context: ProfessionalsFragment, var profession
     class ProfessionalItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val txtName = itemView.findViewById<TextView>(R.id.tv_professional_name)
         val txtSpeciality = itemView.findViewById<TextView>(R.id.tv_professional_speciality)
+        val rating = itemView.findViewById<RatingBar>(R.id.rb_rating)
+        val btnMore = itemView.findViewById<Button>(R.id.btn_more)
     }
 
 }

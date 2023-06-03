@@ -1,18 +1,29 @@
 package com.example.cpaweb
 
+import android.annotation.SuppressLint
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cpaweb.adapters.VersionAdapter
+import com.example.cpaweb.databinding.ActivityCommunityHomeBinding
+import com.example.cpaweb.databinding.ActivityFaqBinding
 
 class Faq : AppCompatActivity() {
-
+    private lateinit var binding: ActivityFaqBinding
     val versionList = ArrayList<Versions>()
 
-
-
+    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_faq)
+        binding = ActivityFaqBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
+        binding.btnBack.setOnClickListener{
+            finish()
+        }
 
         initData()
         setRecyclerView()
@@ -23,11 +34,7 @@ class Faq : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.adapter = versionAdapter
         recyclerView.setHasFixedSize(true)
-
-
-
     }
-
     private fun initData() {
         versionList.add(Versions(
             "Como criar um perfil na rede social e configurar as informações de forma adequada?",

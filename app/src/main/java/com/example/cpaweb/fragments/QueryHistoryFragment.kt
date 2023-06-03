@@ -7,9 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cpaweb.CommunityHome
+import com.example.cpaweb.R
 import com.example.cpaweb.adapters.AppointmentListAdapter
 import com.example.cpaweb.callbacks.GetAppointmentsCallback
 import com.example.cpaweb.databinding.FragmentQueryHistoryBinding
@@ -36,8 +39,18 @@ class QueryHistoryFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val homeActivity = activity as CommunityHome
+        val toolBar = homeActivity.findViewById<Toolbar>(R.id.tb_toolbar)
+        toolBar.title = String.format("CPA | %s", getString(R.string.menu_appointment))
+
         appointmentList = ArrayList()
-        adapter = AppointmentListAdapter(this, appointmentList)
+        adapter = AppointmentListAdapter(this, appointmentList, { mensagem ->
+            Toast.makeText(
+                view.context,
+                mensagem,
+                Toast.LENGTH_LONG
+            ).show()
+        })
         appointmentRecyclerView = binding.rvContainerAppointment
         appointmentRecyclerView.adapter = adapter
         appointmentRecyclerView.setLayoutManager(LinearLayoutManager(this.context));
@@ -46,8 +59,6 @@ class QueryHistoryFragment : Fragment() {
         val service = Api.createService<AppointmentService>(AppointmentService::class.java)
 
         val userId = AuthManager.getUserInfoId()
-
-        print("userId: $userId")
 
         if(userId != null){
             service.getAppointments(userId).enqueue(

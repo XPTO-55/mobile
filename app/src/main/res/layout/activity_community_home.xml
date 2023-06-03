@@ -6,16 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".CommunityHome">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/tb_toolbar"
+        app:title="CPA"
+        app:logo="@mipmap/logocpa"
+        app:logoScaleType="fitCenter"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="20dp"
+        android:background="@color/primary"
+        app:showAsAction="withText"
+        android:elevation="8dp"
+        tools:ignore="MissingConstraints">
+    </com.google.android.material.appbar.MaterialToolbar>
+
     <FrameLayout
         android:id="@+id/frame_layout"
+        android:layout_marginTop="?actionBarSize"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="@+id/tb_toolbar"
+        />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
@@ -25,9 +41,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_navbar"
         android:background="@color/primary"
-        >
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

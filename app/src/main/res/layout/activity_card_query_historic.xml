@@ -89,9 +89,9 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_rating_professional"
             android:layout_width="200dp"
             android:layout_height="45dp"
-
             style="@style/OrangeButton"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_rectangle"

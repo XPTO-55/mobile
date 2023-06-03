@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import androidx.appcompat.widget.Toolbar
+import com.example.cpaweb.CommunityHome
 import com.example.cpaweb.Login
 import com.example.cpaweb.R
 import com.example.cpaweb.databinding.FragmentPlacesBinding
@@ -27,6 +29,9 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         AuthManager.init(view.context)
+        val homeActivity = activity as CommunityHome
+        val toolBar = homeActivity.findViewById<Toolbar>(R.id.tb_toolbar)
+        toolBar.title = String.format("CPA | %s", getString(R.string.menu_profile))
 
         binding.btnExit.setOnClickListener {
             AuthManager.clearAuthToken()

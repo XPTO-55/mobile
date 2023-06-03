@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center_horizontal"
+    android:gravity="start|clip_horizontal"
     android:orientation="vertical">
 
     <TextView
@@ -12,15 +12,20 @@
         android:layout_height="wrap_content"
         android:text="@string/tv_title_professional"
         android:textColor="@color/black"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:id="@+id/tv_professionals"/>
+        android:textSize="24sp"
+        android:textStyle="normal"
+        android:id="@+id/tv_places"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_professionals_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/professional_list_item"
+        android:paddingHorizontal="20dp"
+        android:layout_marginTop="20dp"
         />
 
 </LinearLayout>

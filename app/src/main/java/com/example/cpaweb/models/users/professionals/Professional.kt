@@ -1,6 +1,9 @@
 package com.example.cpaweb.models.users.professionals
 
+import com.example.cpaweb.models.Address
+import com.example.cpaweb.models.users.Rating
 import com.example.cpaweb.models.users.UserBase
+import java.io.Serializable
 import java.time.LocalDate
 
 data class Professional (
@@ -14,5 +17,7 @@ data class Professional (
     val birthday: LocalDate? = null,
     val landline: String? = null,
     val phone: String? = null,
-    val especialidade: String? = null
-)
+    val especialidade: String? = null,
+    val ratings: List<Rating> = ArrayList(),
+    val address: Address?
+): Serializable

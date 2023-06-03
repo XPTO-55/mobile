@@ -3,9 +3,9 @@ package com.example.cpaweb
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class AboutUser : AppCompatActivity() {
+class EditUser : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about_user)
+        setContentView(R.layout.activity_edit_user)
     }
 }

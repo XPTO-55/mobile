@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         tools:listitem="@layout/places_list_item"
         android:elevation="4dp"
-        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="20dp"
         android:layout_marginTop="20dp"
         />
 

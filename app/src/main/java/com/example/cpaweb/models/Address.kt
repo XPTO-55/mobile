@@ -1,5 +1,7 @@
 package com.example.cpaweb.models
 
+import java.io.Serializable
+
 data class Address(
     val id: Long = 0L,
     val street: String = "",
@@ -9,4 +11,5 @@ data class Address(
     val zipcode: String = "",
     val city: String = "",
     val uf: String = "",
-)
+    val url: String?
+): Serializable

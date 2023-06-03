@@ -8,7 +8,8 @@
     android:layout_marginHorizontal="20dp"
     app:layout_constraintCircleRadius="50dp"
     android:background="@drawable/border_dialog"
-    android:gravity="center"
+    android:gravity="center|center_horizontal"
+    android:layout_gravity="center_horizontal"
     android:orientation="vertical">
 
     <LinearLayout
@@ -83,100 +84,63 @@
 
     </LinearLayout>
 
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/professional_info"
-        android:id="@+id/tv_appointment_data"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_appointment_data" />
-
     <LinearLayout
-        android:id="@+id/container_appointment"
-        android:layout_below="@+id/tv_appointment_data"
+        android:layout_below="@+id/professional_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        >
+        android:orientation="vertical">
+        <TextView
 
-        <LinearLayout
-            android:id="@+id/container_appointment_header"
+            android:id="@+id/tv_feedback"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Paciente" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Data" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Status" />
-        </LinearLayout>
-       <ListView
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content" />
+            android:text="@string/txt_feedback"
+            android:layout_marginTop="20dp"
+            />
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:maxLines="8"
+            android:minLines="3"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:background="@color/white_100"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_rating_appointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_rating_appointment"
+            android:layout_marginTop="20dp"
+            />
+
+        <RatingBar
+            android:id="@+id/rb_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:theme="@style/RatingBar"
+            android:backgroundTintMode="@color/secondary"
+            android:stepSize="1"
+            android:numStars="5"
+            />
+
+        <Button
+            android:id="@+id/btn_send_feedback"
+            style="@style/OrangeButton"
+            android:layout_below="@+id/rb_rating"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:layout_marginTop="10dp"
+            />
     </LinearLayout>
-
-    <TextView
-        android:layout_below="@+id/container_appointment"
-        android:id="@+id/tv_feedback"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_feedback"
-        android:layout_marginTop="20dp"
-        />
-
-    <EditText
-        android:id="@+id/et_comment"
-        android:layout_below="@id/tv_feedback"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:lines="8"
-        android:maxLines="8"
-        android:minLines="3"
-        android:scrollbars="vertical"
-        android:textColor="@color/black"
-        android:background="@color/material_dynamic_neutral100"
-        android:layout_marginTop="10dp"
-        />
-
-    <TextView
-        android:layout_below="@+id/et_comment"
-        android:id="@+id/tv_rating_appointment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_rating_appointment"
-        android:layout_marginTop="20dp"
-        />
-
-    <RatingBar
-        android:layout_below="@id/tv_rating_appointment"
-        android:id="@+id/rb_rating"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:stepSize="1"
-        android:numStars="5"
-        />
-
-    <Button
-        style="@style/OrangeButton"
-        android:layout_below="@+id/rb_rating"
-        android:layout_marginHorizontal="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enviar"
-        android:layout_marginTop="10dp"
-        />
 
 </RelativeLayout>

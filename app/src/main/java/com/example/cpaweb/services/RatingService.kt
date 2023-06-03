@@ -9,6 +9,6 @@ import retrofit2.http.Path
 
 interface RatingService {
     @Headers("Content-Type: application/json")
-    @POST("/professional/:professionalId/rating")
-    fun createProfessionalRating(@Path("id") professionalId: Long, @Body createProfessionalRequest: CreateRatingRequest): Call<Void>
+    @POST("/professional/{professionalId}/rating")
+    fun createProfessionalRating(@Path("professionalId") professionalId: Long, @Body createProfessionalRequest: CreateRatingRequest): Call<Void>
 }
