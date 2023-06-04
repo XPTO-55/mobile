@@ -6,6 +6,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.cpaweb.databinding.ActivityCommunityHomeBinding
 import com.example.cpaweb.fragments.*
+import com.example.cpaweb.helpers.AuthManager
 
 val SITE_URL = "https://www.globo.com"
 class CommunityHome : AppCompatActivity() {
@@ -13,6 +14,7 @@ class CommunityHome : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AuthManager.init(this)
         binding = ActivityCommunityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         changeMenuOption(HomeFragment())

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    package="com.example.cpaweb"
+    >
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission
-        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
-        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CPAWeb"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31">
+        >
         <activity
             android:name=".AboutProfessional"
             android:exported="false" />
@@ -40,13 +39,6 @@
         <activity
             android:name=".CardQueryHistoric"
             android:exported="false" />
-        <activity
-            android:name=".Avaliacao"
-            android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
         <activity
             android:name=".CommunityHome"
             android:exported="true" />

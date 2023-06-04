@@ -13,7 +13,7 @@ class AboutUser : AppCompatActivity() {
 
     fun populateFields(){
         val user = AuthManager.getUser()
-        binding.tvUsernameText.text = user.username?.toString()
+        binding.tvUsernameText.text = user.username.toString()
         binding.tvPlaceCityText.text = String.format("%s, %s", "São Paulo", "SP")
         if(user.profileUrl != ""){
             binding.ciProfileImage.setImageURI(Uri.parse(user.profileUrl))
