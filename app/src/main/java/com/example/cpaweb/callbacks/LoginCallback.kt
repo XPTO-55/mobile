@@ -15,7 +15,7 @@ class LoginCallback(
     override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
         if(response.isSuccessful){
             val token: String? = response.body()?.jwtToken
-            val userInfo: LoginResponse? = response.body()
+            val userInfo: LoginResponse? = response.body()!!
             if(token == null || userInfo?.id == null){
                 handleError("Erro ao obter informações do usuário")
                return
@@ -23,11 +23,11 @@ class LoginCallback(
             saveToken(token)
             saveUserInfo(LoginResponse(
                 id = userInfo.id,
-                username = userInfo?.username?.toString(),
-                email = userInfo?.email?.toString(),
-                profileUrl = userInfo?.profileUrl?.toString(),
-                phone = userInfo?.phone?.toString(),
-                userType = userInfo?.userType?.toString(),
+                username = userInfo.username.toString(),
+                email = userInfo.email.toString(),
+                profileUrl = userInfo.profileUrl.toString(),
+                phone = userInfo.phone.toString(),
+                userType = userInfo.userType.toString(),
             ))
             launchActivity()
             finish()

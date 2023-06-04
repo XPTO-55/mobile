@@ -1,6 +1,7 @@
 package com.example.cpaweb.services
 
 import com.example.cpaweb.models.appointments.Appointment
+import com.example.cpaweb.models.appointments.CreateAppointmentRequestDTO
 import com.example.cpaweb.models.users.CreateRatingRequest
 import retrofit2.Call
 import retrofit2.http.Body
@@ -13,4 +14,7 @@ interface AppointmentService {
     @Headers("Content-Type: application/json")
     @GET("/appointments/{userId}")
     fun getAppointments(@Path("userId") userId: Long): Call<List<Appointment>>
+
+    @POST("/appointments")
+    fun createAppointment(@Body createAppointmentRequestDTO: CreateAppointmentRequestDTO): Call<Unit>
 }

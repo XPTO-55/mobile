@@ -60,4 +60,8 @@
     <string name="calendar_offline" translatable="false">offline</string>
     <string name="calendar_primary" translatable="false">primary</string>
     <string name="date_format_patterns" translatable="false">yyyy-MM-dd\'T\'HH:mm:ss</string>
+    <string name="txt_schedule_appointment">Agendar consulta</string>
+    <string name="txt_hint_patient_name">Nome do paciente</string>
+    <string name="txt_shedule_appointment_title">Agendamento de consulta</string>
+    <string name="txt_hint_event_link">Clique para ir para o evento</string>
 </resources>

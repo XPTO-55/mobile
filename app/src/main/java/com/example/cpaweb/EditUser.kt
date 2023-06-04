@@ -1,9 +1,15 @@
 package com.example.cpaweb
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.BitmapFactory
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.service.autofill.UserData
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import com.example.cpaweb.callbacks.UpdatePatientCallback
 import com.example.cpaweb.callbacks.UpdateProfessionalCallback
@@ -26,6 +32,9 @@ class EditUser() : AppCompatActivity() {
     private lateinit var binding: ActivityEditUserBinding
     private lateinit var patientService: PatientService
     private lateinit var professionalService: ProfessionalService
+    private lateinit var imageView: ImageView
+    private val PICK_IMAGE_REQUEST = 1
+
     fun populateFields(userData: UserBase){
         binding.edtName.setText(userData.name?.toString())
         binding.edtEmail.setText(userData.email?.toString())
@@ -45,6 +54,22 @@ class EditUser() : AppCompatActivity() {
             number = binding.edtNumHouse.toString(),
             street = binding.edtRua.toString()
         )
+
+        binding.btnBack.setOnClickListener{
+            finish()
+        }
+
+        imageView = binding.imageView
+
+        binding.buttonChooseImage.setOnClickListener {
+            val intent = Intent()
+            intent.type = "image/*"
+            intent.action = Intent.ACTION_GET_CONTENT
+            startActivityForResult(
+                Intent.createChooser(intent, "Escolher imagem"),
+                PICK_IMAGE_REQUEST
+            )
+        }
        
 
         binding.btnSave.setOnClickListener {
@@ -185,5 +210,27 @@ class EditUser() : AppCompatActivity() {
             email = binding.edtEmail.text.toString(),
             phone = binding.edtPhone.text.toString(),
         ))
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK && data != null) {
+            val imageUri: Uri? = data.data
+            val imagePath = imageUri?.let { getPathFromUri(it) }
+            val bitmap = BitmapFactory.decodeFile(imagePath)
+            imageView.setImageBitmap(bitmap)
+        }
+    }
+
+    private fun getPathFromUri(uri: Uri): String? {
+        val projection = arrayOf(MediaStore.Images.Media.DATA)
+        val cursor = this?.contentResolver?.query(uri, projection, null, null, null)
+        cursor?.moveToFirst()
+        val columnIndex = cursor?.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+        val path = columnIndex?.let { cursor.getString(it) }
+        cursor?.close()
+        return path
     }
 }

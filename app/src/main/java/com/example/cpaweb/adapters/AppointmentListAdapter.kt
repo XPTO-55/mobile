@@ -46,7 +46,7 @@ class AppointmentListAdapter(
         holder.txtPatient.text = currentAppointment.patient.toString()
         holder.txtProfessional.text = currentAppointment.professional.toString()
         holder.txtDate.text = currentAppointment.date.toString()
-        if(currentAppointment.date.isAfter(LocalDateTime.now()) == true){
+        if(currentAppointment.date.isBefore(LocalDateTime.now())){
             holder.txtStatus.text = "Finalizada"
         }else{
             holder.txtStatus.text = "Agendada"

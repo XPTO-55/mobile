@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cpaweb"
-    >
+    package="com.example.cpaweb">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -19,8 +18,10 @@
         android:roundIcon="@mipmap/logocpa"
         android:supportsRtl="true"
         android:theme="@style/Theme.CPAWeb"
-        android:usesCleartextTraffic="true"
-        >
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ScheduleAppointment"
+            android:exported="false" />
         <activity
             android:name=".AboutProfessional"
             android:exported="false" />
